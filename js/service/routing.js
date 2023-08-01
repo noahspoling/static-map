@@ -1,10 +1,8 @@
 import { reactive } from "../packages/arrow.js";
-import { Point } from "../models/point.js";
 import { mapPage } from "../page/map.js";
 import { dataManagementPage } from "../page/dataManagement.js";
 import { aboutPage } from "../page/about.js";
 import { homePage } from "../page/home.js";
-
 
 export const routing = reactive({
     pageNumber: 0,
