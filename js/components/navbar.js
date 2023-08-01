@@ -8,7 +8,7 @@ window.navigate = function(page) {
 }
 
 export const navbar = html`
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-success mb-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" onclick="navigate(0); return false;">Static Map</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

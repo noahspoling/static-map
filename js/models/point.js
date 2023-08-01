@@ -3,13 +3,13 @@ import { data } from "../service/data.js"
 //Model class for points to handle ranges of points and managing the id value
 
 export class Point {
-    #pointName
-    #latitude
-    #longitude
-    #id
+    pointName
+    latitude
+    longitude
+    id
 
     constructor(name, latitude, longitude) {
-        this.#pointName = name
+        this.pointName = name
         if (latitude < -90 || latitude > 90) {
             throw new Error('Latitude must be between -90 and 90');
         }
@@ -20,26 +20,30 @@ export class Point {
         let id = data.pointIdCount
         data.pointIdCount++
 
-        this.#id = id
-        this.#latitude = latitude;
-        this.#longitude = longitude;
+        this.id = id
+        this.latitude = latitude;
+        this.longitude = longitude;
 
     }
 
     //Get methods
     get pointName() {
-        return this.#pointName;
+        return this.pointName;
     }
 
     get latitude() {
-        return this.#latitude;
+        return this.latitude;
     }
 
     get longitude() {
-        return this.#longitude;
+        return this.longitude;
     }
 
     get id() {
-        return this.#id;
+        return this.id;
+    }
+
+    toString() {
+        return `${this.pointName} (ID: ${this.id}, Latitude: ${this.latitude}, Longitude: ${this.longitude})`;
     }
 }
