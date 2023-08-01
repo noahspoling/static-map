@@ -8,3 +8,7 @@
 .scrollable-list ul {
     touch-action: pan-y;
   }
+
+#map {
+    min-height: 90vh;
+}

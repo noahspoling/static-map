@@ -3,6 +3,8 @@ import {navbar} from './navbar.js'
 import { routing } from '../service/routing.js'
 import { rerender, setRerender } from './rerender.js'
 import { data, loadFromLocalStorage } from '../service/data.js'
+import { initializeMap } from "../service/initMap.js";
+
 export const root = document.getElementById("root")
 const nav = document.getElementById("navbar")
 
@@ -15,6 +17,9 @@ const rerenderFunction = () => {
     
     const currentPage = routing.pages[routing.pageNumber]
     currentPage.element(root)
+    if(currentPage.title = "Map") {
+        initializeMap();
+    }
 };
 
 window.addEventListener('DOMContentLoaded', (event) => {
