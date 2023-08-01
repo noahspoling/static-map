@@ -5,7 +5,7 @@ window.deletePoint = deletePoint;
 
 export const pointElement = (point) => {
     return html`
-    <li class="row bg-light m-5 p-5 rounded">
+    <li class="row bg-light mb-5 p-5 rounded">
         <div class="col-md-4">
             <p>ID: ${point.id}</p>
         </div>
