@@ -8,6 +8,7 @@ import { addFromFile } from "../components/addFromFile.js";
 
 export const routing = reactive({
     pageNumber: 0,
+    dataEntryFormPage: 0,
     pages: [
         {
             title: "Home",
