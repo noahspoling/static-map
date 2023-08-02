@@ -3,6 +3,8 @@ import { mapPage } from "../page/map.js";
 import { dataManagementPage } from "../page/dataManagement.js";
 import { aboutPage } from "../page/about.js";
 import { homePage } from "../page/home.js";
+import { addPointForm } from "../components/addPoint.js";
+import { addFromFile } from "../components/addFromFile.js";
 
 export const routing = reactive({
     pageNumber: 0,
@@ -23,6 +25,16 @@ export const routing = reactive({
             title: "About",
             element: aboutPage
         },
+    ],
+    addPointOptions : [
+        {
+            title: "Add From Form",
+            element: addPointForm
+        },
+        {
+            title: "Add From File",
+            element: addFromFile
+        }
     ]
 })
 

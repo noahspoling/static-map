@@ -20,8 +20,8 @@ export const addPoint = (pt) => {
     data.points.push(pt);
     data.pointIdCount += 1;
 
-    //localStorage.setItem('points', JSON.stringify(data.points));
-    //localStorage.setItem('pointCount', JSON.stringify(data.pointIdCount));
+    localStorage.setItem('points', JSON.stringify(data.points));
+    localStorage.setItem('pointCount', JSON.stringify(data.pointIdCount));
 
     //setRerender()
 }
@@ -43,6 +43,11 @@ export const deletePoint = (id) => {
     //localStorage.setItem('pointCount', JSON.stringify(data.pointIdCount));
 
     //setRerender()
+}
+
+export const clearLocalStorage = () => {
+    localStorage.setItem('points', [])
+    localStorage.setItem('pointCount', 0)
 }
 
 export const loadFromLocalStorage = () => {

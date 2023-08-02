@@ -5,8 +5,9 @@ import { rerender, setRerender } from './rerender.js'
 import { data, loadFromLocalStorage } from '../service/data.js'
 import { initializeMap } from "../service/initMap.js";
 
-export const root = document.getElementById("root")
-const nav = document.getElementById("navbar")
+
+const nav = document.getElementById("navbar") //attach navbar here
+export const root = document.getElementById("root") //main window root
 
 navbar(nav)
 
